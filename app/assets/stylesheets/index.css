@@ -1,0 +1,56 @@
+.apresentation {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background: red; */
+}
+
+.container {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 1.5rem;
+  /* background: blue; */
+}
+
+.container h2 {
+  font-size: 2.5rem;
+}
+
+.container span {
+  font-size: 1.2rem;
+}
+
+.description {
+  width: 70%;
+  font-size: 1.3rem;
+  /* background: orange; */
+}
+
+.container-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.buttons {
+  width: 10rem;
+  height: 3rem;
+  border-radius: .5rem;
+  background: var(--bg_button);
+  border: 2px solid var(--stroke_button);
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  justify-content: center;
+}
+
+.buttons img {
+  width: 19%;
+  background: var(--bg_button)
+}
