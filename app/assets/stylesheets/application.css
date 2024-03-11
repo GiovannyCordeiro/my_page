@@ -24,9 +24,25 @@
   --border_gray_tags: #989898;
 }
 
+@font-face {
+  font-family: Orkney_bold;
+  src: url('OrkneyBold.ttf');
+}
+
+@font-face {
+  font-family: Orkney_regular;
+  src: url('OrkneyRegular.ttf');
+}
+
+@font-face {
+  font-family: Orkney_bold_italic;
+  src: url('OrkneyBoldItalic.ttf');
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  background: var(--gray_bg)
+  background: var(--gray_bg);
+  font-family: Orkney_regular;
 }
