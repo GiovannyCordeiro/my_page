@@ -1,0 +1,51 @@
+.icon-link {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  transition: width 0.8s ease-in-out;
+}
+
+.icon-link p {
+  display: none;
+}
+
+.only-icon {
+  position: relative;
+  width: 3rem;
+  border-radius: 10rem;
+  height: 100%;
+  background: var(--mid_gray);
+  border: 1px solid var(--stroke_button);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.only-icon img {
+  width: 1.5rem;
+}
+
+.description-icon {
+  position: relative;
+  left: -1.5rem;
+  height: 99%;
+  width: 0;
+  border-radius: 0 10rem 10rem 0;
+  background: var(--mid_gray);
+  border: 1px solid var(--stroke_button);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: width .3s ease;
+  z-index: 1;
+}
+
+.icon-link:hover .description-icon {
+  position: relative;
+  width: 10rem;
+}
+
+.icon-link:hover p {
+  display: block;
+}
