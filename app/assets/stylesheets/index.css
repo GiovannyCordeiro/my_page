@@ -48,6 +48,7 @@
   align-items: center;
   gap: .6rem;
   justify-content: center;
+  color: var(--black_txt)
 }
 
 @keyframes shake {

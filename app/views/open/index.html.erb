@@ -14,18 +14,18 @@
       </p>
     </div>
     <div class="container-buttons">
-      <div class="buttons">
+      <%= link_to my_anotations_path, class: "buttons" do %>
         <%= image_tag 'svg/notes.svg' %>
         Anotações
-      </div>
-      <div class="buttons">
+      <% end %>
+      <a href="https://github.com/giovannycordeiro" target="_blank" class="buttons">
         <%= image_tag 'svg/github.svg' %>
         Github
-      </div>
-      <div class="buttons">
+      </a>
+      <a href="https://www.linkedin.com/in/giovannycordeiro/" target="_blank" class="buttons">
         <%= image_tag 'svg/linkedin.svg' %>
         Linkedin
-      </div>
+      </a>
     </div>
   </div>
 </section>
