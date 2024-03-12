@@ -50,6 +50,32 @@
   justify-content: center;
 }
 
+@keyframes shake {
+  0% {
+    transform: rotate(0);
+  }
+
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  50% {
+    transform: rotate(15deg);
+  }
+
+  75% {
+    transform: rotate(-5deg);
+  }
+
+  100% {
+    transform: rotate(0);
+  }
+}
+
+.buttons:hover img {
+  animation: shake 0.5s ease-in-out;
+}
+
 .buttons img {
   width: 19%;
   background: var(--mid_gray)
