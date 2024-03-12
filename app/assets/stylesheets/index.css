@@ -111,5 +111,12 @@
   }
 
   /* section last-anotation */
+  .last-anotations .container>h2 {
+    margin: 5rem 0;
+    font-size: 1.5rem;
+  }
 
+  .last-anotations .container .anotation span {
+    font-size: 1rem;
+  }
 }
