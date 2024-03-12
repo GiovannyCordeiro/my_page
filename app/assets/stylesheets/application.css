@@ -45,4 +45,5 @@
   box-sizing: border-box;
   background: var(--gray_bg);
   font-family: Orkney_regular;
+  text-decoration: none;
 }
