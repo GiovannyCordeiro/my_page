@@ -1,1 +1,9 @@
-<h2>notes</h2>
+<%= stylesheet_link_tag 'my-anotation' %>
+
+<header>
+  <div class="container-links">
+    <%= render  "shared/icon-link", text: 'Home', icon: 'home', route: '/'%>
+    <%= render  "shared/icon-link", text: 'Anotações', icon: 'notes', route: 'my_anotations' %>
+    <%= render  "shared/icon-link", text: 'Tags', icon: 'tag', route: '/my_anotation/tags'%>
+  </div>
+</header>
