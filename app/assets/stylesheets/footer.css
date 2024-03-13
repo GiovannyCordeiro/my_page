@@ -4,6 +4,7 @@ footer {
   background: var(--mid_gray);
   display: flex;
   justify-content: center;
+  margin-top: auto;
 }
 
 .container-footer {
