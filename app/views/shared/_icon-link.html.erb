@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'icon' %>
 
-<div class="icon-link">
+<%= link_to my_anotations_path, class: "icon-link" do %>
   <div class="only-icon">
     <%= image_tag "svg/#{icon}.svg" %>
   </div>
@@ -9,4 +9,4 @@
       <%= text %>
     </p>
   </div>
-</div>
+<% end %>
