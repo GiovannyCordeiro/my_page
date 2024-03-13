@@ -1,1 +1,21 @@
+<%= stylesheet_link_tag 'anotation-tags' %>
+
 <%= render 'shared/header-anotations' %>
+
+<section class="title-section">
+  <div class="container-title">
+    <h2>Tags anotações</h2>
+    <p>Todas as tags que já usei nas minhas anotações</p>
+  </div>
+</section>
+
+<section class="all-tags">
+  <div class="container-tags">
+    <%= render  "shared/tag", tag: '#ruby' %>
+    <%= render  "shared/tag", tag: '#javascript' %>
+    <%= render  "shared/tag", tag: '#estudos' %>
+    <%= render  "shared/tag", tag: '#opinião' %>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>
