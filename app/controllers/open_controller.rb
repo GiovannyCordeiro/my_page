@@ -2,4 +2,6 @@
 class OpenController < ApplicationController
   def index; end
   def myAnotation; end
+  def anotationTags; end
 end
+[]
