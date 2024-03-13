@@ -7,3 +7,40 @@
     <%= render  "shared/icon-link", text: 'Tags', icon: 'tag', route: '/my_anotation/tags'%>
   </div>
 </header>
+
+<section class="title">
+  <div class="container-title">
+    <h2>Minha anotações</h2>
+    <p>
+      Aqui é o local que eu guardo minhas anotações e tento 
+      passar um pouco do meu conhecimento na medida que 
+      eu aprendo e me desenvolvo profissionalmente
+    </p>
+  </div>
+</section>
+
+<section class="anotations">
+  <div class="container">
+    <%= render 'shared/anotation' %>
+    <%= render 'shared/anotation' %>
+    <%= render 'shared/anotation' %>
+  </div>
+</section>
+
+<div class="pages-anotations">
+  <div class="container-pages">
+    <div class="prev">
+      <%= image_tag 'svg/arrow' %>
+      Prev
+    </div>
+    <div class="count-pages">
+      <p>1/2</p>
+    </div>
+    <div class="next">
+      Next
+      <%= image_tag 'svg/arrow' %>
+    </div>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
