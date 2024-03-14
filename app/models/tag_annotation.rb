@@ -1,0 +1,2 @@
+class TagAnnotation < ApplicationRecord
+end
