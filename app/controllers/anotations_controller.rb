@@ -1,3 +1,0 @@
-class AnotationsController < ApplicationController
-
-end
