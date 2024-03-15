@@ -1,0 +1,38 @@
+.anotation {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  min-width: 40rem;
+  width: 38%;
+  background: var(--mid_gray);
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid var(--gray_lines);
+  margin-bottom: 3rem;
+}
+
+.anotation>h2 {
+  font-size: 1.5rem;
+}
+
+.anotation .container-tags {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+
+@media screen and (max-width: 800px) {
+  .anotation {
+    width: 70%;
+  }
+
+  .anotation>h2 {
+    font-size: 1.3rem;
+  }
+
+  .anotation .container-tags .tag {
+    padding: .3rem .8rem;
+    font-size: .8rem;
+  }
+}
