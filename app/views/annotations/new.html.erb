@@ -3,32 +3,7 @@
 
 <section class="content-annotation">
   <div class="container-annotation">
-    <%= form_with model: @annotation, data: {turbo:false} do |form| %>
-      <div class="inputs-annotation">
-        <%= form.label :title, 'Title' %>
-        <%= form.text_field :title %>
-      </div>
-      <div class="inputs-annotation">
-        <%= form.label :description, 'Description' %>
-        <%= form.text_area :description %>
-      </div>
-      <p>Tags</p>
-      <div class="tags-annotation">
-        <% @tags.each do |tag| %>
-          <div class="checkbox">
-            <input type="checkbox" name="tags[<%= tag.id %>]" id="tags[<%= tag.id %>]" />
-            <label for="tags[<%= tag.id %>]"><%= tag.content %></label />
-          </div>
-        <% end %>
-      </div>
-      <div class="inputs-annotation">
-        <%= form.label :content, 'Content' %>
-        <%= form.text_area :content %>
-      </div>
-      <div class="inputs-annotation">
-        <%= form.submit %>
-      </div>
-    </div>
-    <% end %>
+    <%= render  "form", annotation: @annotation%>
+  </div>
 </section>
 
