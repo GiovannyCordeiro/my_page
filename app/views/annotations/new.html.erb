@@ -1,7 +1,44 @@
-<%= stylesheet_link_tag 'anotations/new-cms' %>
+<%= stylesheet_link_tag 'annotations/new-cms' %>
 
-<%= form_with model: @annotation, data: {turbo:false} do |form| %>
-  <p>
-    djkalsfjs
-  </p>
-<% end %>
+
+<section class="content-annotation">
+  <div class="container-annotation">
+    <%= form_with model: @annotation, data: {turbo:false} do |form| %>
+      <div class="inputs-annotation">
+        <%= form.label :title, 'Title' %>
+        <%= form.text_field :title %>
+      </div>
+      <div class="inputs-annotation">
+        <%= form.label :description, 'Description' %>
+        <%= form.text_area :description %>
+      </div>
+      <p>Tags</p>
+      <div class="tags-annotation">
+        <div class="checkbox">
+          <input type="checkbox" name="tags[ruby]" id="tags[ruby]">
+          <label for="tags[ruby]">ruby</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="tags[ruby_on_rails]" id="tags[ruby_on_rails]">
+          <label for="tags[ruby_on_rails]">Ruby on rails</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="tags[estudos]" id="tags[estudos]">
+          <label for="tags[estudos]">Estudos</label>
+        </div>
+        <div class="checkbox">
+          <input type="checkbox" name="tags[Opiniões]" id="tags[Opiniões]">
+          <label for="tags[Opiniões]">Opiniões</label>
+        </div>
+      </div>
+      <div class="inputs-annotation">
+        <%= form.label :content, 'Content' %>
+        <%= form.text_area :content %>
+      </div>
+      <div class="inputs-annotation">
+        <%= form.submit %>
+      </div>
+    </div>
+    <% end %>
+</section>
+

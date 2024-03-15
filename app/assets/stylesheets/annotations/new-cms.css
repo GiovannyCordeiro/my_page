@@ -1,0 +1,48 @@
+.content-annotation {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-annotation .container-annotation {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-annotation .container-annotation form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.inputs-annotation {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.content-annotation .container-annotation form .inputs-annotation input {
+  width: 100%;
+  padding: .5rem 2rem;
+  border-radius: .5rem;
+  border: none;
+  border: 1px solid black;
+}
+
+.content-annotation .container-annotation form .tags-annotation {
+  display: flex;
+  gap: 1rem;
+}
+
+.content-annotation .container-annotation form .inputs-annotation textarea {
+  height: 10rem;
+  resize: vertical;
+  border-radius: .5rem;
+  padding: .5rem .5rem
+}
