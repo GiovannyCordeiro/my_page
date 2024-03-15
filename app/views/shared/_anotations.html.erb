@@ -1,0 +1,19 @@
+<%= stylesheet_link_tag 'shared/anotations' %>
+
+
+<% @annotations.each do |annotation| %>  
+  <div class="anotation">
+    <h2><%= annotation.title %></h2>
+    <p>
+      <%= annotation.created_at.strftime('%d/%m/%Y') %>
+    </p>
+    <div class="container-tags">
+      <%= render  "shared/tag", tag: '#ruby'%>
+      <%= render  "shared/tag", tag: '#rubyOnRails' %>
+      <%= render  "shared/tag", tag: '#tecnico' %>
+    </div>
+    <span>
+      <%= annotation.description %>
+    </span>
+  </div>
+<% end %>
