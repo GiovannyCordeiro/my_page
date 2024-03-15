@@ -1,6 +1,6 @@
 # Controller that show content for public
 class OpenController < ApplicationController
-  def index;
+  def index
     @annotations = Annotation.all
   end
   def myAnotation

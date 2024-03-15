@@ -8,9 +8,16 @@
       <%= annotation.created_at.strftime('%d/%m/%Y') %>
     </p>
     <div class="container-tags">
-      <%= render  "shared/tag", tag: '#ruby'%>
-      <%= render  "shared/tag", tag: '#rubyOnRails' %>
-      <%= render  "shared/tag", tag: '#tecnico' %>
+      <!--procurando id tac-->
+      <% registry_tags = TagAnnotation.where(annotation_id: annotation.id) %>
+        <!--percorrendo todas as tags-->
+        <% registry_tags.each do |tag| %>
+          <!--vinculando com o tabela que da o nome-->
+          <% tags_names = Tag.where(id: tag.tag_id)  %>
+          <% tags_names.each do |tag| %>
+            <%= render  "shared/tag", tag: "#{tag.content}"%>
+          <% end %>
+        <% end %>
     </div>
     <span>
       <%= annotation.description %>
