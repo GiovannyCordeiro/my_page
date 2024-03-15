@@ -14,22 +14,12 @@
       </div>
       <p>Tags</p>
       <div class="tags-annotation">
-        <div class="checkbox">
-          <input type="checkbox" name="tags[ruby]" id="tags[ruby]">
-          <label for="tags[ruby]">ruby</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="tags[ruby_on_rails]" id="tags[ruby_on_rails]">
-          <label for="tags[ruby_on_rails]">Ruby on rails</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="tags[estudos]" id="tags[estudos]">
-          <label for="tags[estudos]">Estudos</label>
-        </div>
-        <div class="checkbox">
-          <input type="checkbox" name="tags[Opiniões]" id="tags[Opiniões]">
-          <label for="tags[Opiniões]">Opiniões</label>
-        </div>
+        <% @tags.each do |tag| %>
+          <div class="checkbox">
+            <input type="checkbox" name="tags[<%= tag.id %>]" id="tags[<%= tag.id %>]" />
+            <label for="tags[<%= tag.id %>]"><%= tag.content %></label />
+          </div>
+        <% end %>
       </div>
       <div class="inputs-annotation">
         <%= form.label :content, 'Content' %>

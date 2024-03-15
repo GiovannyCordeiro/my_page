@@ -1,6 +1,6 @@
 <%= stylesheet_link_tag 'annotations/index-annotations' %>
 
-<header>
+<header class="header-cms">
   <h2>CMS</h2>
   <%= link_to  "Criar anotação", new_annotation_path %>
 </header>
@@ -8,32 +8,19 @@
 <section class="all-anotations">
   <h2>Todas anotações</h2>
   <div class="container-anotations-cms">
-
-    <div class="anotation-cms">
-      <h2>title very long</h2>
-      <p>xx/xx/xxxx</p>
-      <div class="container-buttons-cms">
-        <a href="">Edit</a>
-        <a href="">Delete</a>
+    <% @annotations.each do |annotation| %>
+      <div class="anotation-cms">
+        <h2><%= annotation.title %></h2>
+        <p>
+          <%= annotation.created_at.strftime('%d/%m/%Y') %>
+        </p>
+        <div class="container-buttons-cms">
+          <a href="">Edit</a>
+          <a href="">Delete</a>
+        </div>
       </div>
-    </div>
-    <div class="anotation-cms">
-      <h2>title very long</h2>
-      <p>xx/xx/xxxx</p>
-      <div class="container-buttons-cms">
-        <a href="">Edit</a>
-        <a href="">Delete</a>
-      </div>
-    </div>
-    <div class="anotation-cms">
-      <h2>title very long</h2>
-      <p>xx/xx/xxxx</p>
-      <div class="container-buttons-cms">
-        <a href="">Edit</a>
-        <a href="">Delete</a>
-      </div>
-    </div>
-
+    <% end %>
+    
   </div>
 </section>
 
