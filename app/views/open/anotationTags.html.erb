@@ -11,10 +11,9 @@
 
 <section class="all-tags">
   <div class="container-tags">
-    <%= render  "shared/tag", tag: '#ruby' %>
-    <%= render  "shared/tag", tag: '#javascript' %>
-    <%= render  "shared/tag", tag: '#estudos' %>
-    <%= render  "shared/tag", tag: '#opinião' %>
+    <% @tags.each do |tag| %>
+      <%= render  "shared/tag", tag: tag.content %>
+    <% end %>
   </div>
 </section>
 

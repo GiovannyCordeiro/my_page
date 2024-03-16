@@ -4,4 +4,5 @@
   border: 3px solid var(--border_gray_tags);
   border-style: dashed;
   border-radius: .5rem;
+  color: var(--black_txt_tags);
 }

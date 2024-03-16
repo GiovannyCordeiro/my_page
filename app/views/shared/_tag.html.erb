@@ -1,5 +1,3 @@
 <%= stylesheet_link_tag 'shared/tag' %>
 
-<div class="tag">
-  <%= tag %>
-</div>
+<%= link_to tag, "/my_anotations/tags/#{tag}", class: "tag"%>
