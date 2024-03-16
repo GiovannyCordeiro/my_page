@@ -1,11 +1,11 @@
 # Controller that show content for public
 class OpenController < ApplicationController
   def index
-    @annotations = Annotation.order(:created_at).limit(3)
+    @annotations = Annotation.where(active: true).order(:created_at).limit(3)
   end
 
   def myAnotation
-    @annotations = Annotation.all
+    @annotations = Annotation.where(active: true)
   end
 
   def anotationTags
@@ -22,7 +22,7 @@ class OpenController < ApplicationController
       TagAnnotation
       .select('annotations.id', 'title', 'description', 'content', 'created_at')
       .joins(:annotation)
-      .where(tag_id: index_tag)
+      .where(tag_id: index_tag, 'annotations.active': true)
   end
 end
 []

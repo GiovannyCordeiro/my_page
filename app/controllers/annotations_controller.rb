@@ -1,7 +1,7 @@
 class AnnotationsController < ApplicationController
 
   def index
-    @annotations = Annotation.all
+    @annotations = Annotation.where(active: true)
   end
 
   def new
