@@ -15,7 +15,7 @@
           <%= annotation.created_at.strftime('%d/%m/%Y') %>
         </p>
         <div class="container-buttons-cms">
-          <a href="">Edit</a>
+          <%= link_to 'Edit', edit_annotation_path(annotation) %>
           <a href="">Delete</a>
         </div>
       </div>

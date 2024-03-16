@@ -1,7 +1,7 @@
 # Controller that show content for public
 class OpenController < ApplicationController
   def index
-    @annotations = Annotation.all
+    @annotations = Annotation.order(:created_at).limit(3)
   end
   def myAnotation
     @annotations = Annotation.all

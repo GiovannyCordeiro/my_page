@@ -24,6 +24,11 @@ class AnnotationsController < ApplicationController
     end
   end
 
+  def edit
+    @tags = Tag.all
+    @annotation = Annotation.find(params[:id])
+  end
+
   private
 
   def annotation_params
