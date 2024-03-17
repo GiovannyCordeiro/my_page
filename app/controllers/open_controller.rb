@@ -24,5 +24,9 @@ class OpenController < ApplicationController
       .joins(:annotation)
       .where(tag_id: index_tag, 'annotations.active': true)
   end
+
+  def specificAnnotation
+
+  end
 end
 []
