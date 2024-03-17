@@ -14,6 +14,10 @@
   font-size: 1.5rem;
 }
 
+.anotation>h2 a {
+  color: var(--black_txt);
+}
+
 .anotation .container-tags {
   display: flex;
   align-items: center;

@@ -3,7 +3,9 @@
 
 <% @annotations.each do |annotation| %>  
   <div class="anotation">
-    <h2><%= annotation.title %></h2>
+    <h2>
+      <%= link_to annotation.title, "/my_annotations/#{annotation.title}"%>
+    </h2>
     <p>
       <%= annotation.created_at.strftime('%d/%m/%Y') %>
     </p>
