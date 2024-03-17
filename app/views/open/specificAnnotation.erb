@@ -3,7 +3,9 @@
 <header class="header-spec-annot">
   <div class="header-spec-title">
     <h2><%= @annotation.title %></h2>
-    <%= image_tag 'svg/back-arrow' %>
+    <%= link_to my_annotations_path, request.referer do %>
+      <%= image_tag 'svg/back-arrow' %>
+    <% end  %>
   </div>
   <p>
     <%= @annotation.created_at.strftime('%d/%m/%Y') %>
