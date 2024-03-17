@@ -2,18 +2,30 @@
 
 <header class="header-spec-annot">
   <div class="header-spec-title">
-    <h2>Title very long</h2>
+    <h2><%= @annotation.title %></h2>
     <%= image_tag 'svg/back-arrow' %>
   </div>
-  <p>xx/xx/xxxx</p>
-  <div class="tags">
-    <p>#dfjj</p>
+  <p>
+    <%= @annotation.created_at.strftime('%d/%m/%Y') %>
+  </p>
+  <div class="container-tags">
+    <% registry_tags = TagAnnotation.where(annotation_id: @annotation.id) %>
+      <!--percorrendo todas as tags-->
+      <% registry_tags.each do |tag| %>
+        <!--vinculando com o tabela que da o nome-->
+        <% tags_names = Tag.where(id: tag.tag_id)  %>
+        <% tags_names.each do |tag| %>
+        <%= render  "shared/tag", tag: "#{tag.content}"%>
+      <% end %>
+    <% end %>
   </div>
 </header>
 
 <section class="content-spec-annot">
   <div class="container-spec-annot">
-    <p>lfkdjsfkls</p>
+    <p>
+      <%= @annotation.content %>
+    </p>
   </div>
 </section>
 

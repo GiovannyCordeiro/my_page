@@ -26,7 +26,7 @@ class OpenController < ApplicationController
   end
 
   def specificAnnotation
-
+    @annotation = Annotation.find_by(title: params[:title_post])
   end
 end
 []
