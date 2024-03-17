@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admins, :skip => [:registrations]
   root 'open#index'
   get '/my_annotations', controller: 'open', action: 'myAnotation'
   get '/my_annotations/tags', controller: 'open', action: 'anotationTags'
