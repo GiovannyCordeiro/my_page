@@ -3,7 +3,7 @@
 <header class="header-spec-annot">
   <div class="header-spec-title">
     <h2><%= @annotation.title %></h2>
-    <%= link_to my_annotations_path, request.referer do %>
+    <%= link_to my_annotations_path do %>
       <%= image_tag 'svg/back-arrow' %>
     <% end  %>
   </div>
@@ -25,9 +25,7 @@
 
 <section class="content-spec-annot">
   <div class="container-spec-annot">
-    <p>
-      <%= @annotation.content %>
-    </p>
+    <%= raw @content %>
   </div>
 </section>
 

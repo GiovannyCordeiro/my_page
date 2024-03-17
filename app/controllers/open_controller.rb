@@ -1,3 +1,5 @@
+require 'redcarpet'
+
 # Controller that show content for public
 class OpenController < ApplicationController
   def index
@@ -27,6 +29,8 @@ class OpenController < ApplicationController
 
   def specificAnnotation
     @annotation = Annotation.find_by(title: params[:title_post])
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    @content = markdown.render(@annotation.content)
   end
 end
 []

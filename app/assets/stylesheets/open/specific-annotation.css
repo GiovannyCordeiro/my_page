@@ -1,5 +1,5 @@
 .header-spec-annot {
-  margin-top: 7rem;
+  margin-top: 5rem;
   width: 100%;
   height: 30vh;
   background: var(--mid_gray);
@@ -7,7 +7,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
   gap: 1rem;
 }
 
@@ -41,8 +40,27 @@
 .container-spec-annot {
   border-top: 2px solid var(--gray_lines);
   border-bottom: 2px solid var(--gray_lines);
-  width: 50%;
+  width: 40%;
   height: 100%;
+}
+
+.container-spec-annot code {
+  padding: 0 .5rem;
+  border-radius: .2rem;
+  background: rgb(168, 168, 168);
+  font-style: italic;
+}
+
+.container-spec-annot blockquote {
+  padding: .5rem 1rem;
+  border: 2px solid rgba(121, 121, 121, 0.5);
+  border-radius: .4rem;
+}
+
+.container-spec-annot blockquote:before {
+  width: 100%;
+  content: 'code';
+  color: rgba(77, 77, 77, 0.7);
 }
 
 .share-spec-annot {
