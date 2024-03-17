@@ -45,6 +45,11 @@ class AnnotationsController < ApplicationController
     end
   end
 
+  def destroy
+    annotation = Annotation.find(params[:id])
+    annotation.update_column(:active, false)
+  end
+
   private
 
   def annotation_params

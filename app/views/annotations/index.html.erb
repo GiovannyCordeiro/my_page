@@ -16,7 +16,7 @@
         </p>
         <div class="container-buttons-cms">
           <%= link_to 'Edit', edit_annotation_path(annotation) %>
-          <a href="">Delete</a>
+          <%= link_to  "delete", annotation_path(annotation), data: {'turbo-method': :delete, 'turbo-confirm': 'Tem certeza que quer deletar?'} %>
         </div>
       </div>
     <% end %>
