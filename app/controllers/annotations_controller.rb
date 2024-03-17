@@ -39,7 +39,7 @@ class AnnotationsController < ApplicationController
         TagAnnotation.create(annotation_id: @annotation.id, tag_id: key_tag)
       end
       # terminou de atulizar? joga para a outra rota!
-      redirect_to my_anotations_path
+      redirect_to my_annotations_path
     else
       render :edit
     end
