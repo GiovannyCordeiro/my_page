@@ -1,5 +1,7 @@
 class AnnotationsController < ApplicationController
 
+  before_action :authenticate_admin!
+
   def index
     @annotations = Annotation.where(active: true)
   end
