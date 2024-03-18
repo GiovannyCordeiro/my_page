@@ -1,4 +1,4 @@
-<% registry_tags = TagAnnotation.select('tags.id', 'tags.content').joins(:tag).where(annotation_id: annotation.id) %>
+<% registry_tags = TagAnnotation.select('tags.id', 'tags.content').joins(:annotation, :tag).where(annotation_id: annotation.id) %>
   <% registry_tags.each do |tag| %>
   <%= render  "shared/tag", tag: "#{tag.content}"%>
 <% end %>
