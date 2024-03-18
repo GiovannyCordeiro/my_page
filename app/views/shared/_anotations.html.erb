@@ -17,9 +17,9 @@
           <!--vinculando com o tabela que da o nome-->
           <% tags_names = Tag.where(id: tag.tag_id)  %>
           <% tags_names.each do |tag| %>
-            <%= render  "shared/tag", tag: "#{tag.content}"%>
-          <% end %>
+          <%= render  "shared/tag", tag: "#{tag.content}"%>
         <% end %>
+      <% end %>
     </div>
     <span>
       <%= annotation.description %>

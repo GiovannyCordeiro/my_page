@@ -21,7 +21,7 @@ class OpenController < ApplicationController
 
     @tags = Tag.all
     name_tag = params[:type_tag]
-    index_tag = Tag.where(content: name_tag)[0][:id]
+    index_tag = Tag.find_by(content: name_tag)
     @annotations =
       TagAnnotation
       .select('annotations.id', 'title', 'description', 'content', 'created_at')
