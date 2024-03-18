@@ -7,7 +7,9 @@ class OpenController < ApplicationController
   end
 
   def myAnotation
-    @annotations = Annotation.where(active: true)
+    # @annotations = Annotation.where(active: true)
+    @annotations = Annotation.where(active: true).page(params[:page])
+    # @users = User.all.page(params[:page])
   end
 
   def anotationTags

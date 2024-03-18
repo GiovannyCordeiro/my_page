@@ -15,23 +15,13 @@
 
 <section class="anotations">
   <div class="container">
-    <%= render 'shared/anotations', annotations: @annotations %>
+  <%= render 'shared/anotations', annotations: @annotations %>
   </div>
 </section>
 
 <div class="pages-anotations">
   <div class="container-pages">
-    <div class="prev">
-      <%= image_tag 'svg/arrow' %>
-      Prev
-    </div>
-    <div class="count-pages">
-      <p>1/2</p>
-    </div>
-    <div class="next">
-      Next
-      <%= image_tag 'svg/arrow' %>
-    </div>
+    <%= paginate @annotations %>
   </div>
 </div>
 
