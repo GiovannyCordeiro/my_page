@@ -11,14 +11,11 @@
     </p>
     <div class="container-tags">
       <!--procurando id tac-->
-      <% registry_tags = TagAnnotation.where(annotation_id: annotation.id) %>
+      <% registry_tags = TagAnnotation.select('tags.id', 'tags.content').joins(:tag).where(annotation_id: annotation.id) %>
         <!--percorrendo todas as tags-->
         <% registry_tags.each do |tag| %>
-          <!--vinculando com o tabela que da o nome-->
-          <% tags_names = Tag.where(id: tag.tag_id)  %>
-          <% tags_names.each do |tag| %>
-          <%= render  "shared/tag", tag: "#{tag.content}"%>
-        <% end %>
+        <!--vinculando com o tabela que da o nome-->
+        <%= render  "shared/tag", tag: "#{tag.content}"%>
       <% end %>
     </div>
     <span>
