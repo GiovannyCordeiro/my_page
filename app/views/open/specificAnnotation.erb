@@ -29,10 +29,10 @@
   </div>
 </section>
 
-<section class="share-spec-annot">
-  <div class="share-button-spec-annot">
+<section class="share-spec-annot" data-controller="button">
+  <button class="share-button-spec-annot" data-action="button#copy"">
     <%= image_tag 'svg/share' %>
-  </div>
+  </button>
 </section>
 
 <%= render "shared/footer" %>
