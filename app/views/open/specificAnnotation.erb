@@ -11,13 +11,7 @@
     <%= @annotation.created_at.strftime('%d/%m/%Y') %>
   </p>
   <div class="container-tags">
-    <!--procurando id tac-->
-    <% registry_tags = TagAnnotation.select('tags.id', 'tags.content').joins(:tag).where(annotation_id: @annotation.id) %>
-      <!--percorrendo todas as tags-->
-      <% registry_tags.each do |tag| %>
-      <!--vinculando com o tabela que da o nome-->
-      <%= render  "shared/tag", tag: "#{tag.content}"%>
-    <% end %>
+    <%= render  "shared/render_tags", annotation: @annotation %>
   </div>
 </header>
 
