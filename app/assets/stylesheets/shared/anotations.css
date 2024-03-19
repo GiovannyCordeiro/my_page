@@ -29,6 +29,7 @@
 @media screen and (max-width: 800px) {
   .anotation {
     width: 70%;
+    min-width: 0;
   }
 
   .anotation>h2 {

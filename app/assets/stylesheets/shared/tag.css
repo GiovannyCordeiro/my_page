@@ -6,3 +6,9 @@
   border-radius: .5rem;
   color: var(--black_txt_tags);
 }
+
+@media screen and (max-width: 800px) {
+  .tag {
+    padding: .2rem .5rem;
+  }
+}

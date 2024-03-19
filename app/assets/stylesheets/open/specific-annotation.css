@@ -92,6 +92,7 @@
   margin-top: .5rem;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
 }
@@ -115,4 +116,19 @@
   color: #fff;
   position: absolute;
 
+}
+
+
+@media screen and (max-width: 800px) {
+  .header-spec-title h2 {
+    font-size: 1.5rem;
+  }
+
+  .header-spec-annot>p {
+    font-size: .9rem;
+  }
+
+  .container-spec-annot {
+    width: 80%;
+  }
 }
