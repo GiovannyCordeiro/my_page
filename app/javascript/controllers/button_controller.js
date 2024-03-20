@@ -13,7 +13,8 @@ export default class extends Controller {
     newElement.id = "copy_clipboard"
     newElement.className = "copy_clipboard"
     newElement.textContent = "URL Copiada!"
-    document.body.appendChild(newElement)
+    const shareAnnot = document.getElementById("share-spec-annot")
+    shareAnnot.appendChild(newElement)
     setTimeout(this.removeElement, 1400)
   }
 

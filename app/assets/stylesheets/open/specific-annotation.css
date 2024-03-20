@@ -69,6 +69,7 @@
 }
 
 .share-spec-annot {
+  position: relative;
   margin: 2.5rem 0;
   width: 100%;
   height: 10vh;
@@ -103,16 +104,12 @@
 }
 
 .copy_clipboard {
-  padding: .5rem 2rem;
+  padding: .1rem 2rem;
   background: #0ed32f;
   border-radius: .5rem;
   color: #fff;
   position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  border: 2px solid rgb(175, 175, 175);
-  z-index: 9999;
+  top: 5.5rem;
 }
 
 .copy_clipboard .container_text {
