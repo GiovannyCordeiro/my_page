@@ -112,6 +112,7 @@
   left: 50%;
   transform: translateX(-50%);
   border: 2px solid rgb(175, 175, 175);
+  z-index: 9999;
 }
 
 .copy_clipboard .container_text {
