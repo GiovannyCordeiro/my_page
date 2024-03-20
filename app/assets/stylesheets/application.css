@@ -46,6 +46,7 @@
   box-sizing: border-box;
   font-family: Orkney_regular;
   text-decoration: none;
+  line-height: 1.8rem;
 }
 
 body {

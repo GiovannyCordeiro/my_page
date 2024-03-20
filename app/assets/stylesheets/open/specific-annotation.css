@@ -42,22 +42,27 @@
   border-bottom: 2px solid var(--gray_lines);
   width: 45%;
   height: 100%;
+  padding: 3rem 0;
 }
 
-.container-spec-annot code {
+.container-spec-annot blockquote {
   padding: 0 .5rem;
   border-radius: .2rem;
   background: rgb(168, 168, 168);
   font-style: italic;
 }
 
-.container-spec-annot blockquote {
+.container-spec-annot code {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 4rem 0;
   padding: .5rem 1rem;
   border: 2px solid rgba(121, 121, 121, 0.5);
   border-radius: .4rem;
 }
 
-.container-spec-annot blockquote:before {
+.container-spec-annot code:before {
   width: 100%;
   content: 'code';
   color: rgba(77, 77, 77, 0.7);
