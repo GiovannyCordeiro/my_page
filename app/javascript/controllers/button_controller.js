@@ -5,7 +5,7 @@ export default class extends Controller {
   copy(event) {
     event.preventDefault()
     const currentLocation = window.location.href.split('/').pop();
-    const pathClipboard = `www.giovannydev/my_annotations/${currentLocation}`
+    const pathClipboard = `www.giovannydev.com.br/my_annotations/${currentLocation}`
     navigator.clipboard.writeText(pathClipboard)
 
     // const div = "<div id='copy_clipboard' class='copy_clipboard'>URL Copiada!</div>"
