@@ -3,7 +3,7 @@ class AnnotationsController < ApplicationController
   before_action :authenticate_admin!
 
   def index
-    @annotations = Annotation.where(active: true)
+    @annotations = Annotation.where(active: true).order(created_at: :desc)
   end
 
   def new

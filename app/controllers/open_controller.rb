@@ -3,12 +3,12 @@ require 'redcarpet'
 # Controller that show content for public
 class OpenController < ApplicationController
   def index
-    @annotations = Annotation.where(active: true).order(:created_at).limit(3)
+    @annotations = Annotation.where(active: true).order(created_at: :desc).limit(3)
   end
 
   def myAnotation
     # @annotations = Annotation.where(active: true)
-    @annotations = Annotation.where(active: true).page(params[:page])
+    @annotations = Annotation.where(active: true).order(created_at: :desc).page(params[:page])
     # @users = User.all.page(params[:page])
   end
 
