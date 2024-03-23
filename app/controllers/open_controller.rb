@@ -7,13 +7,11 @@ class OpenController < ApplicationController
   end
 
   def myAnotation
-    # @annotations = Annotation.where(active: true)
     @annotations = Annotation.where(active: true).order(created_at: :desc).page(params[:page])
-    # @users = User.all.page(params[:page])
   end
 
   def anotationTags
-    if !params[:type_tag]
+    unless params[:type_tag]
       @tags = Tag.all
       @annotations = []
       return
