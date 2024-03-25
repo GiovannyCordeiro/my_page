@@ -6,11 +6,11 @@ class OpenController < ApplicationController
     @annotations = Annotation.where(active: true).order(created_at: :desc).limit(3)
   end
 
-  def myAnotation
+  def my_annotation
     @annotations = Annotation.where(active: true).order(created_at: :desc).page(params[:page])
   end
 
-  def anotationTags
+  def annotation_tags
     unless params[:type_tag]
       @tags = Tag.all
       @annotations = []
@@ -27,7 +27,7 @@ class OpenController < ApplicationController
       .where(tag_id: index_tag, 'annotations.active': true)
   end
 
-  def specificAnnotation
+  def specific_annotation
     @annotation = Annotation.find_by(title: params[:title_post])
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     @content = markdown.render(@annotation.content)
