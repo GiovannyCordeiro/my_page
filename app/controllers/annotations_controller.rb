@@ -14,7 +14,6 @@ class AnnotationsController < ApplicationController
   def create
     @annotation = Annotation.new(annotation_params)
     if @annotation.save
-      # colocando tags
       tag_keys = params[:tags].keys
       tag_keys.each do |key_tag|
         TagAnnotation.create(annotation_id: @annotation.id, tag_id: key_tag)
@@ -34,13 +33,11 @@ class AnnotationsController < ApplicationController
   def update
     @annotation = Annotation.find(params[:id])
     if @annotation.update(annotation_params)
-      # se atualizar manda tira todas as tags que ele tem e coloca as novas (melhorar isso dps)
       TagAnnotation.where(annotation_id: params[:id]).destroy_all
       tag_keys = params[:tags].keys
       tag_keys.each do |key_tag|
         TagAnnotation.create(annotation_id: @annotation.id, tag_id: key_tag)
       end
-      # terminou de atulizar? joga para a outra rota!
       redirect_to my_annotations_path
     else
       render :edit
