@@ -2,12 +2,14 @@ require 'redcarpet'
 
 # Controller that show content for public
 class OpenController < ApplicationController
+  before_action :actived_annotations, only: %i[index my_annotation]
+
   def index
-    @annotations = Annotation.where(active: true).order(created_at: :desc).limit(3)
+    @annotations = @actived_annot.limit(3)
   end
 
   def my_annotation
-    @annotations = Annotation.where(active: true).order(created_at: :desc).page(params[:page])
+    @annotations = @actived_annot.page(params[:page])
   end
 
   def annotation_tags
@@ -32,5 +34,10 @@ class OpenController < ApplicationController
     markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     @content = markdown.render(@annotation.content)
   end
+
+  private
+
+  def actived_annotations
+    @actived_annot = Annotation.where(active: true).order(created_at: :desc)
+  end
 end
-[]
