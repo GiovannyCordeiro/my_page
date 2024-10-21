@@ -1,5 +1,5 @@
 url: 'https://giovannydev.com.br/'
-baseurl: 'my_page'
+baseurl: ''
 title: 'Jekyllwind'
 
 plugins:
