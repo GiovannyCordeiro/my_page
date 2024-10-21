@@ -13,7 +13,7 @@ module.exports = {
         'Prosto-Sans': ['Prosto-Sans', 'sans-serif'],
         'Prosto-Sans-Bold': ['Prosto-Sans-Bold', 'sans-serif'],
         'Prosto-Sans-Black': ['Prosto-Sans-Black', 'sans-serif'],
-        'Prosto-Sans-italic': ['Prosto-Sans-Black', 'sans-serif'],
+        'Prosto-Sans-italic': ['Prosto-Sans-italic', 'sans-serif'],
       }
     },
   },
