@@ -1,5 +1,5 @@
 url: ''
-baseurl: ''
+baseurl: 'my_page'
 title: 'Jekyllwind'
 
 plugins:
