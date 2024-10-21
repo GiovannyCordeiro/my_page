@@ -4,3 +4,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face{
+  font-family: "Prosto-Sans";
+  src: url("../fonts/TT-Prosto-Sans-Trial-Regular.otf") format("opentype");
+  font-size: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Prosto-Sans-Bold";
+  src: url("../fonts/TT-Prosto-Sans-Trial-Bold.otf") format("opentype");
+  font-size: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Prosto-Sans-Black";
+  src: url("../fonts/TT-Prosto-Sans-Trial-Black.otf") format("opentype");
+  font-size: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: "Prosto-Sans-italic";
+  src: url("../fonts/TT-Prosto-Sans-Trial-Italic.otf") format("opentype");
+  font-size: normal;
+  font-display: swap;
+}
