@@ -1,6 +1,6 @@
 url: 'https://giovannycordeiro.github.io'
 baseurl: 'my_page'
-title: 'Jekyllwind'
+title: ''
 
 plugins:
   - jekyll-postcss
